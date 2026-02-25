@@ -1,0 +1,99 @@
+.contact-experience-page {
+    background-color: var(--color-black);
+}
+
+.contact-luxury-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.info-card-luxury {
+    padding: 3rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.info-item-luxury {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.info-item-luxury h3 {
+    font-size: 1.1rem;
+    color: var(--color-gold);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.info-item-luxury p {
+    opacity: 0.7;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.social-connect {
+    margin-top: 4rem;
+}
+
+.social-connect h3 {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.social-icons-luxury {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icons-luxury a {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition-luxury);
+}
+
+.social-icons-luxury a:hover {
+    background: var(--color-gold-gradient);
+    color: var(--color-black);
+    transform: translateY(-5px);
+}
+
+.contact-form-luxury {
+    padding: 4rem;
+    border-radius: 12px;
+}
+
+.contact-form-luxury h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Map grayscale filter is handled in iframe style attribute */
+.google-map-luxury {
+    margin-top: 8rem;
+    line-height: 0;
+}
+
+@media (max-width: 992px) {
+    .contact-luxury-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .contact-form-luxury {
+        padding: 2.5rem;
+    }
+}

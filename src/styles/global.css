@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+    --color-maroon: #5A0F1C;
+    --color-maroon-dark: #2D050C;
+    --color-gold: #C9A227;
+    --color-gold-light: #F5D17E;
+    --color-gold-gradient: linear-gradient(135deg, #C9A227 0%, #F5D17E 50%, #C9A227 100%);
+    --color-beige: #F5E6D3;
+    --color-white: #FFFFFF;
+    --color-black: #0A0A0A;
+
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    --shadow-premium: 0 30px 60px rgba(0, 0, 0, 0.4);
+    --shadow-gold: 0 10px 40px rgba(201, 162, 39, 0.4);
+
+    --transition-luxury: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Texture Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.text-gold-gradient {
+    background: var(--color-gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gold {
+    color: var(--color-gold);
+}
+
+/* Fixed Inner Page Hero - More compact & centered */
+.hero-standard {
+    padding-top: 140px;
+    padding-bottom: 60px;
+    background: linear-gradient(to bottom, var(--color-maroon) 0%, var(--color-black) 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-standard::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--color-black) 0%, transparent 100%);
+}
+
+.hero-standard span.section-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-standard h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-standard .hero-desc {
+    font-size: 1.1rem;
+    opacity: 0.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Centered Layouts */
+.section-padding {
+    padding: 6rem 0;
+}
+
+/* Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* WhatsApp Floating */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 55px;
+    height: 55px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.whatsapp-icon {
+    width: 28px;
+    height: 28px;
+}
+
+/* Luxury Button Adjustment */
+.btn-luxury-sm {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .hero-standard {
+        padding-top: 120px;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+}
