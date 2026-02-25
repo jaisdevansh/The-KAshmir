@@ -530,3 +530,90 @@
         font-size: 3rem;
     }
 }
+
+@media (max-width: 768px) {
+    .hero-cinematic {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 8vw, 3rem);
+    }
+
+    .visual-wrapper {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+        margin: 0 auto;
+    }
+
+    .main-3d-img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .story-text-container h2 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .catering-stats {
+        gap: 3rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .catering-info h2 {
+        font-size: clamp(2.2rem, 8vw, 2.8rem);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero-actions button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .glass {
+        padding: 2rem;
+    }
+
+    .split-content h3 {
+        font-size: clamp(1.8rem, 6vw, 2.2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .visual-wrapper {
+        height: 300px;
+        max-width: 300px;
+    }
+
+    .main-3d-img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .parallax-container {
+        height: 300px;
+    }
+
+    .card-image-wrap {
+        height: 250px;
+    }
+
+    .catering-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
